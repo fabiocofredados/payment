@@ -48,13 +48,13 @@ Below, some CURL commands to use the application.
 
 ### Payments
 **List the payments:**
-
+```console
 curl -X 'GET' \
 'http://localhost:8080/payments' \
 -H 'accept: */*'
-
+```
 **Save a payment**
-
+```console
 curl -X 'POST' \
 'http://localhost:8080/payments' \
 -H 'accept: */*' \
@@ -65,19 +65,19 @@ curl -X 'POST' \
 "zipCode": "28001",
 "cardNumber": "124456896688"
 }'
-
+```
 ### Webhooks
 
 **List all webhooks**
-
+```console
 curl -X 'GET' \
 'http://localhost:8080/webhooks' \
 -H 'accept: */*'
-
+```
 
 **Save a webhook** for a specific url, for example: 
 http://localhost:3030/moreonetest
-
+```console
 curl -X 'POST' \
 'http://localhost:8080/webhooks' \
 -H 'accept: */*' \
@@ -86,26 +86,26 @@ curl -X 'POST' \
 "url": "http://localhost:3030/moreonetest",
 "type": "PAYMENT",
 "params": [
-{
-"name": "Content-Type",
-"value": "json"
-},
-{
-"name": "anything",
-"value": "ok"
-}
-]
+            {
+            "name": "Content-Type",
+            "value": "json"
+            },
+            {
+            "name": "anything",
+            "value": "ok"
+            }
+        ]
 }'
-
+```
 ### Failed Webhooks
 **List the failed webhooks to be processed later:**
-
+```console
 curl -X 'GET' \
 'http://localhost:8080/webhooks/reprocess' \
 -H 'accept: */*'
+```
 
+### AI Usage
 
-### Reference Documentation
-
-* [Encrypt and Decrypt data](https://smattme.com/posts/how-to-encrypt-decrypt-rsa-in-java/)
-
+* How to configure the swagger in spring boot 3.0 application to show all response codes for each api for an Open API specification
+* Encrypt and Decrypt strings in java
